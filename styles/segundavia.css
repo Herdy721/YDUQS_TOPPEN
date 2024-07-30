@@ -306,7 +306,7 @@
 
 @media screen and (min-width:1281px){
     .container__2via {
-        height: 50em;
+        height: auto;
     }
 }
 
