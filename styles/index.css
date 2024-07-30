@@ -152,7 +152,7 @@
 }
 @media screen and (min-width:1281px){
     .container {
-        height: auto;
+        height: 40em;
     }
     .nome_login {
         font-size: var(--fonte-size_16);
