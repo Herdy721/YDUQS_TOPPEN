@@ -116,9 +116,6 @@ body {
     .background_login_logo{
         width: 10%;
     }
-    .background_login_img{
-        height: max-content;
-    }
 }
 
 @media screen and (max-width:768px){
