@@ -117,7 +117,7 @@ body {
         width: 10%;
     }
     .background_login_img{
-        height: auto;
+        height: max-content;
     }
 }
 
