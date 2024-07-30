@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>YDUQS | TOPPEN</title>
+    <link rel="icon" href="./assets/favicon.png">
+</head>
+<body>
+    <header id="inicio" class="cabeçalho">
+        <img class="background_2via_img" src="assets/banner.png" alt="login">
+        <a class="cabeçalho_logo" href="https://www.yduqs.com.br/" target="_blank" ><img src="./assets/YDUQS.jpg" href="https://www.yduqs.com.br/" alt="YDUQS" class="cabeçalho_logo"></a>
+        <a class="cabeçalho_logo2" href="https://toppen.com.br/" target="_blank" ><img src="./assets/TPP_B.png" href=" " alt="TOPPEN" class="cabeçalho_logo2"></a>
+    </header>
+    <section class="container__menu">
+        <a href="./index.html" class="menu">Portal</a> 
+        <a class="menu_separador">•</a> 
+        <a href="./segundavia.html" class="menu">2º via da parcela</a>
+        <a class="menu_separador">•</a> 
+        <a href="./contratos.html" class="menu">Seus contratos</a>
+        <a class="menu_separador">•</a> 
+        <a href="./renegociacao.html" class="menu_atual">Renegociação de contrato</a>
+        </section> 
+    <section class="container__2via">
+        <h1 class="container__titulo__2via">Renegociação de contrato</h1>
+        <h3 class="container__contrato">Contrato: 000.098.398.001 - JOSE DA SILVA XAVIER</h3>
+        <table class="container_tabela">
+            <thead>
+                <tr class="tabela">
+                    <th class="tabela_text_titulo">Parcela</th>
+                    <th class="tabela_text_titulo">Data de vencimento</th>
+                    <th class="tabela_text_titulo">Valor</th>
+                    <th class="tabela_text_titulo">Valor atualizado</th>
+                    <th class="tabela_text_titulo">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tabela">
+                    <td class="tabela_text">2</td>
+                    <td class="tabela_text">05/04/2024</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">R$ 1520.00</td>
+                    <td class="tabela_text">Em atraso</td>
+                </tr>
+                <tr class="tabela">
+                    <td class="tabela_text">3</td>
+                    <td class="tabela_text">05/05/2024</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">R$ 1480.00</td>
+                    <td class="tabela_text">Em atraso</td>
+                </tr>
+                <tr class="tabela">
+                    <td class="tabela_text">4</td>
+                    <td class="tabela_text">05/06/2024</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">A vencer</td>
+                </tr>
+                <tr class="tabela">
+                    <td class="tabela_text">5</td>
+                    <td class="tabela_text">05/07/2024</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">A vencer</td>
+                </tr>
+                <tr class="tabela">
+                    <td class="tabela_text">6</td>
+                    <td class="tabela_text">05/08/2024</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">R$ 1400.00</td>
+                    <td class="tabela_text">A vencer</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <button class="input__calcular" onclick="countChecked()">Gerar negociação</button> -->
+        
+        <div class="container__negociacao">
+            <section class="negociacao">
+                <h3 class="saldo_negociar_titulo">Valor a ser negociado</h3>
+                <p class="saldo_negociar"id="result"></p>
+            </section>
+            <section>
+                <div class="input__check">
+                    <input type="radio" id="radio" name="radio__parcelas" value="Todas" checked  />
+                    <label for="Todas">Todas as parcelas</label>
+                    <input type="radio" id="radio" name="radio__parcelas" value="Vencidas"  />
+                    <label for="Vencidas">Parcelas vencidas</label>
+                </div>
+            
+                <p class="input_email"><label for="start">Data para pagamento da entrada: </label><input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-07-22" max="2025-12-31" /></p>
+                <p class="input_email"><label for="tentacles">Dia de vencimento das parcelas: </label><input type="number" id="tentacles" name="tentacles" min="01" max="10" /> de cada mês</p>
+                <p class="input_email"></pclass> <input type="range" id="volume" name="volume" min="1" max="36"/>
+                    <label for="volume"><output id="value"></output></label></p>,
+                    <div class="box">
+                        <label class="box_menor" for="volume"><output id="value_div"></output></label>
+                        <label class="box_menor" for="volume"><output id="result_2"></output></label>
+                    </div>
+                
+                <!-- <button class="btn_calc" onclick="getValorParcelas()">Gerar</button>  -->
+            </section>
+            
+        </div>
+        <p class="input_email">E-mail: <input class="input_email_text" type="text" name="nome" placeholder=" Digite seu e-mail aqui"></p>
+        <p class="input_email">Telefone: <input class="input_email_text" type="text" name="nome" placeholder=" Digite seu número de telefone aqui"></p>
+        <div class="container__botao_2via">
+            <a class="container__botao_link_2via" href="">Gerar boleto</a>
+            <a href="javascript:criarPopup()" class="container__botao_link_2via" href="">Enviar</a>
+            <a class="container__botao_link_2via" onclick="window.print()" href="">Imprimir</a>
+        </div>  
+        <hr>
+    </section>
+    <div class="container__contato__2via">
+        <h1 class="container__contato__2via__titulo">Fale conosco</h1>
+        <div class="container__contato__2via__column">
+            <img src="./assets/icons8-nova-mensagem-64.png" alt="Foto" class="container__contato__2via__icon">
+            <p class="container__contato__2via__column__titulo">E-mail</p>
+            <p class="container__contato__2via__column__texto">Tem alguma dúvida?</p>
+            <a class="container__contato__2via__column__contato" href="mailto:herdy721@gmail.com">exemplo@yduqs.com.br</a>
+        </div>
+        <div class="container__contato__2via__column">
+            <img src="./assets/icons8-telefone-celular-64.png" alt="Foto" class="container__contato__2via__icon">
+            <p class="container__contato__2via__column__titulo">Telefone</p>
+            <p class="container__contato__2via__column__texto">Você pode ligar a qualquer hora.</p>
+            <a class="container__contato__2via__column__contato"href="tel:+550800 000 0000">0800 000 0000</a>
+        </div>
+        <div class="container__contato__2via__column">
+            <img src="./assets/icons8-bate-papo-48.png" alt="Foto" class="container__contato__2via__icon">
+            <p class="container__contato__2via__column__titulo">Chat</p>
+            <p class="container__contato__2via__column__texto">Precisa de uma ajuda agora?</p>
+            <a class="container__contato__2via__column__contato">Basta abrir o chat.</a>
+        </div>
+    </div>  
+    <section class="wrap">
+        <div class="rounded-div-wrap" style="height: 30px;">
+            <div class="rounded-div"></div>
+        </div>
+    </section>
+    
+    <footer class="rodape_2via">
+        <section class="inicio">
+            <a href="#inicio" class="inicio__link__2via">- Voltar ao topo -</a>
+        </section>
+        <hr>
+        <section class="rodape__texto__final_2via">
+            <p>© 2024 - TOPPEN</p>
+        </section>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

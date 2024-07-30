@@ -1,0 +1,16 @@
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabeçalho_logo {
+    height: 6em;
+    padding: 0 2%;
+}
+
+.cabeçalho_logo2 {
+    height: 3em;
+    padding: 0 3%;
+}
