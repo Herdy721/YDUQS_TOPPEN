@@ -150,10 +150,17 @@
 .menu_separador {
     color: var(--cor-2)
 }
-
+@media screen and (min-width:1500px){
+    .container {
+        height: 60em;
+    }
+    .container__botao_link  {
+        font-size: var(--fonte-size_36);
+    }
+}
 @media screen and (min-width:1281px){
     .container {
-        height: 50em;
+        height: 40em;
     }
     .nome_login {
         font-size: var(--fonte-size_16);
