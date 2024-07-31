@@ -17,13 +17,7 @@ const value_entrada = document.querySelector("#value_entrada");
 const input_entrada = document.querySelector("#entrada");
 function updateValue_entrada() {
   const inputValue_entrada = input_entrada.value_entrada;
-  if (inputValue_entrada == 1) {
-    value_entrada.textContent = 'À vista';
-  } else if (inputValue_entrada > 1) {
-    value_entrada.textContent = `${inputValue_entrada} Parcelas`;
-  } else {
-    value_entrada.textContent = inputValue_entrada;
-  }
+  value_entrada.textContent = `${inputValue_entrada} Parcelas`;
 }
 
 
