@@ -12,9 +12,25 @@ function updateValue() {
   }
 }
 
+document.getElementById("value_entrada").textContent = `13 parcelas`;
+const value_entrada = document.querySelector("#value_entrada");
+const input_entrada = document.querySelector("#entrada");
+function updateValue_entrada() {
+  const inputValue_entrada = input_entrada.value_entrada;
+  if (inputValue_entrada == 1) {
+    value_entrada.textContent = 'À vista';
+  } else if (inputValue_entrada > 1) {
+    value_entrada.textContent = `${inputValue_entrada} Parcelas`;
+  } else {
+    value_entrada.textContent = inputValue_entrada;
+  }
+}
+
+
 input.addEventListener("input", (event) => {
   updateValue();
   getValordiv();
+  updateValue_entrada();
 });
 
 document.getElementById("result").textContent = `R$ 0`;
@@ -33,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateValue();
   getValordiv();
   atuaValordiv();
+  updateValue_entrada();
 });
 
 // Executar as funções quando o rádio for alterado
