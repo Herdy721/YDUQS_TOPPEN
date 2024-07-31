@@ -12,12 +12,12 @@ function updateValue() {
   }
 }
 
-document.getElementById("value_entrada").textContent = `13 parcelas`;
+document.getElementById("value_entrada").textContent = `Defina o valor de entrada`;
 const value_entrada = document.querySelector("#value_entrada");
 const input_entrada = document.querySelector("#entrada");
 function updateValue_entrada() {
   const inputValue_entrada = input_entrada.value_entrada;
-  value_entrada.textContent = `R$ ${inputValue_entrada} de entrada`;
+  value_entrada.textContent = `R$${inputValue_entrada} de entrada`;
 }
 
 
