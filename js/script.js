@@ -15,15 +15,25 @@ function updateValue() {
 document.getElementById("value_entrada").textContent = `Defina o valor de entrada`;
 const value_entrada = document.querySelector("#value_entrada");
 const input_entrada = document.querySelector("#entrada");
+
 function updateValue_entrada() {
-  const inputValue_entrada = input_entrada.value_entrada;
-  value_entrada.textContent = `R$${value_entrada} de entrada`;
+  const inputValue_entrada = input_entrada.value;
+  if (inputValue_entrada == 0) {
+    value_entrada.textContent = 'Sem entrada';
+  } else if (inputValue_entrada > 1) {
+    value_entrada.textContent = `R$ ${inputValue_entrada} de entrada`;
+  } else {
+    value_entrada.textContent = inputValue_entrada;
+  }
 }
 
 
 input.addEventListener("input", (event) => {
   updateValue();
   getValordiv();
+});
+
+input_entrada.addEventListener("input", (event) => {
   updateValue_entrada();
 });
 
@@ -53,6 +63,7 @@ radioContainer.addEventListener('change', () => {
     updateValue();
     getValordiv();
     atuaValordiv();
+    updateValue_entrada();
 });
 
 function getValorParcelas() {
@@ -76,14 +87,14 @@ function getValordiv() {
   const result = getValorParcelas();
   const input = document.querySelector("#volume");
   const inputValue = input.value;
-  const result_div = result / inputValue
-  const formattedValue = result_div.toFixed(2);
+  const result_div = result / inputValue;
+  const formattedValue = result_div.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   value_div.textContent = `Valor da parcela: R$ ${formattedValue}`;
 }
 
 function atuaValordiv() {
   const result = getValorParcelas();
-  const result_format = result.toFixed(2);
+  const result_format = result.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const result_div = getValordiv();
   document.getElementById('result').textContent = `R$ ${result_format}`;
   document.getElementById('result_2').textContent = `Saldo devedor: R$ ${result_format}`;
