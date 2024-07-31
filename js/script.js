@@ -17,7 +17,7 @@ const value_entrada = document.querySelector("#value_entrada");
 const input_entrada = document.querySelector("#entrada");
 function updateValue_entrada() {
   const inputValue_entrada = input_entrada.value_entrada;
-  value_entrada.textContent = `${inputValue_entrada} Parcelas`;
+  value_entrada.textContent = `R$ ${inputValue_entrada} de entrada`;
 }
 
 
