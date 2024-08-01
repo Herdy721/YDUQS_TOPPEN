@@ -97,6 +97,26 @@ function getValorParcelas() {
   }
 }
 
+function getValorTotal() {
+  // Obtém todos os elementos radio com o nome "radio__parcelas"
+  const radios = document.getElementsByName('radio__parcelas');
+  const entrada = getValorentrada();
+
+  // Itera por cada radio button
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      // Se o radio estiver selecionado, retorna o valor correspondente
+      if (radios[i].value === 'Vencidas') {
+        value_par= 3000;
+        return value_par;
+      } else {
+        value_par= 7200;
+        return value_par;
+      }
+    }
+  }
+}
+
 function getValordiv() {
   const result = getValorParcelas();
   const input = document.querySelector("#volume");
@@ -107,10 +127,11 @@ function getValordiv() {
 }
 
 function atuaValordiv() {
+  const total = getValorTotal();
   const result = getValorParcelas();
   const result_format = result.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const result_div = getValordiv();
-  document.getElementById('result').textContent = `R$ ${result_format}`;
+  document.getElementById('result').textContent = `R$ ${total}`;
   document.getElementById('result_2').textContent = `Saldo devedor: R$ ${result_format}`;
 }
 
