@@ -4,7 +4,7 @@ const input = document.querySelector("#volume");
 function updateValue() {
   const inputValue = input.value;
   if (inputValue == 1) {
-    value.textContent = 'À vista';
+    value.textContent = `${inputValue} Parcela`;
   } else if (inputValue > 1) {
     value.textContent = `${inputValue} Parcelas`;
   } else {
@@ -27,6 +27,14 @@ function updateValue_entrada() {
   }
 }
 
+function getValorentrada() {
+  const inputValue_entrada = input_entrada.value;
+  if (inputValue_entrada == 0) {
+    return 0;
+  } else if (inputValue_entrada > 1) {
+    return inputValue_entrada;
+  }
+}
 
 input.addEventListener("input", (event) => {
   updateValue();
@@ -35,6 +43,9 @@ input.addEventListener("input", (event) => {
 
 input_entrada.addEventListener("input", (event) => {
   updateValue_entrada();
+  updateValue();
+  getValordiv();
+  atuaValordiv();
 });
 
 document.getElementById("result").textContent = `R$ 0`;
@@ -69,15 +80,18 @@ radioContainer.addEventListener('change', () => {
 function getValorParcelas() {
   // Obtém todos os elementos radio com o nome "radio__parcelas"
   const radios = document.getElementsByName('radio__parcelas');
+  const entrada = getValorentrada();
 
   // Itera por cada radio button
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       // Se o radio estiver selecionado, retorna o valor correspondente
       if (radios[i].value === 'Vencidas') {
-        return 3000;
+        value_par= 3000 - entrada;
+        return value_par;
       } else {
-        return 7200;
+        value_par= 7200 - entrada;
+        return value_par;
       }
     }
   }
@@ -87,7 +101,7 @@ function getValordiv() {
   const result = getValorParcelas();
   const input = document.querySelector("#volume");
   const inputValue = input.value;
-  const result_div = result / inputValue;
+  const result_div = result / inputValue;  
   const formattedValue = result_div.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   value_div.textContent = `Valor da parcela: R$ ${formattedValue}`;
 }
@@ -99,6 +113,13 @@ function atuaValordiv() {
   document.getElementById('result').textContent = `R$ ${result_format}`;
   document.getElementById('result_2').textContent = `Saldo devedor: R$ ${result_format}`;
 }
+
+function atuaValor() {
+  const result = getValorParcelas();
+  const result_format = result.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  document.getElementById('result').textContent = `R$ ${result_format}`;
+}
+
 
 function criarPopup(){
   alert("Documento enviado por e-mail!");

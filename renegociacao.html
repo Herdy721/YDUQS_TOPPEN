@@ -88,15 +88,12 @@
                     <input type="radio" id="radio" name="radio__parcelas" value="Vencidas"  />
                     <label for="Vencidas">Parcelas vencidas</label>
                 </div>
-            
-                <p class="input_email"><label for="start">Data para pagamento da entrada: </label><input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-07-22" max="2025-12-31" /></p>
-                <p class="input_email"><label for="tentacles">Dia de vencimento das parcelas: </label><input type="number" id="tentacles" name="tentacles" min="01" max="10" /> de cada mês</p>
-                <p class="input_email"></pclass> <input type="range" id="volume" name="volume" min="1" max="36"/>
-                    <label for="volume"><output id="value"></output></label></p>
-
-                <p class="input_email"></pclass> <input type="range" id="entrada" name="entrada" min="0" max="7200"/>
+                <p class="input_email"></pclass> <input type="range" id="entrada" name="entrada" min="0" max="3000" step="1"/>
                     <label for="entrada"><output id="value_entrada"></output></label></p>
-
+                <p class="input_email"><label for="start">Data para pagamento da entrada: </label><input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-07-22" max="2025-12-31" /></p>
+                <p class="input_email"></pclass> <input type="range" id="volume" name="volume" min="1" max="36" step="1"/>
+                    <label for="volume"><output id="value"></output></label></p>
+                <p class="input_email"><label for="tentacles">Dia de vencimento das parcelas: </label><input type="number" id="tentacles" name="tentacles" min="01" max="10" /> de cada mês</p>
                     <div class="box">
                         <label class="box_menor" for="volume"><output id="value_div"></output></label>
                         <label class="box_menor" for="volume"><output id="result_2"></output></label>
@@ -109,7 +106,7 @@
         <p class="input_email">E-mail: <input class="input_email_text" type="text" name="nome" placeholder=" Digite seu e-mail aqui"></p>
         <p class="input_email">Telefone: <input class="input_email_text" type="text" name="nome" placeholder=" Digite seu número de telefone aqui"></p>
         <div class="container__botao_2via">
-            <a class="container__botao_link_2via" href="">Pagar</a>
+            <a class="container__botao_link_2via" href="pgto.html">Pagar</a>
             <a href="javascript:criarPopup()" class="container__botao_link_2via" href="">Enviar</a>
             <a class="container__botao_link_2via" onclick="window.print()" href="">Imprimir</a>
         </div>  
