@@ -150,9 +150,10 @@
 .menu_separador {
     color: var(--cor-2)
 }
+
 @media screen and (min-width:1281px){
     .container {
-        height: 40em;
+        height: 60em;
     }
     .nome_login {
         font-size: var(--fonte-size_16);
