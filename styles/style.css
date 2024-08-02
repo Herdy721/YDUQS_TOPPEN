@@ -1,6 +1,5 @@
 @import url(header.css);
 @import url(index.css);
-@import url(segundavia.css);
 @import url(rodape.css);
 @import url(login.css);
 
@@ -55,4 +54,414 @@ body {
     font-size: var(--fonte-size_16);
     font-weight: 400;
     margin: 0;
+}
+
+.background_2via_img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.1;
+}
+.container__2via{
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    background-color: var(--cor-2);
+}
+
+.container__contrato{
+    font-family: var(--fonte-3);
+    font-size: var(--fonte-size_16);
+    color: var(--cor-1);
+    font-weight: 500;
+    padding: 0 2em;
+    position: relative;
+    text-align: left;
+}
+
+.container__menu{
+    position: relative;
+}
+
+.container__titulo__2via{
+    font-family: var(--fonte-3);
+    font-size: var(--fonte-size_28);
+    color: var(--cor-1);
+    font-weight: 600;
+    padding: 0 1em;
+    position: relative;
+    text-align: left;
+}
+
+.container__gera{
+    padding: 4em 0;
+    text-align: center;
+}
+.container_tabela{
+    padding: 0 1em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.input__calcular{
+    margin: 1em 1.5em;
+}
+
+.input__check{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+}
+.input_email_text{
+    width: 20em;
+    background-color: var(--cor-2);
+    border: 1px solid #ccc;
+    border-radius: 4px;  
+}
+.input_email_text:hover{
+    border: 1px solid var(--cor-3);  
+}
+.tabela {
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+.tabela_text_titulo{
+    padding: 0.5em;
+    font-size: var(--fonte-size_14);
+    background-color: var(--cor-5);
+    color: var(--cor-2);
+    opacity: 0.7;
+}
+.tabela_text{
+    padding: 0.5em;
+    font-size: var(--fonte-size_14);
+}
+.tabela_mais{
+    width: 15px;
+}
+.container__negociacao{
+    display: flex;
+    justify-content: center;
+}
+
+.container__negociacao__column{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6em;
+}
+
+.saldo_negociar_titulo{
+    margin: 0em 0em;
+}
+.saldo_negociar{
+    background-color: var(--cor-3);
+    border-radius: 5px;
+    color: var(--cor-2);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_48);
+    display: block;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    position: relative;
+    width: 300px;
+    height: 145px;
+}
+.saldo__negociar__column{
+    background-color: var(--cor-3);
+    border-radius: 5px;
+    color: var(--cor-2);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_18);
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    position: relative;
+    width: 150px;
+    height: 50px;
+}
+.input_email{
+    padding: 0 5em;
+}
+
+ .container__botao_2via {
+    padding: 0 15em;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 25%;
+}
+
+.container__botao_link_2via  {
+    background-color: var(--cor-2);
+    border: 1px solid var(--cor-1); 
+    border-radius: 5px;
+    color: var(--cor-1);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_16);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: 1em 2em;
+    position: relative;
+}
+
+.container__botao_link_2via:hover{
+    background-color: var(--cor-3);
+    color: var(--cor-2);
+    border: 1px solid var(--cor-3); 
+    transform: scale(1.1);
+    transition: 0.5s;
+    /* box-shadow: 0 0 0 5px var(--cor-2),
+    0 0 0 5.5px var(--cor-3); */
+}
+
+.container__contato__2via {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 8%;
+    background-color: var(--cor-2);
+}
+
+.container__contato__2via__titulo{
+    color: var(--cor-3);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_36);
+    width: 2em;
+}
+
+
+
+.container__contato__2via__column{
+    text-align: center;
+}
+.container__contato__2via__icon{
+    height: 20%;
+}
+.container__contato__2via__column__titulo{
+    color: var(--cor-3);
+    font-family: var(--fonte-1);
+    font-weight: 600;
+}
+
+.container__contato__2via__column__texto{
+    color: var(--cor-1);
+    font-family: var(--fonte-1);
+    font-weight: 300;
+}
+
+.container__contato__2via__column__contato{
+    text-decoration: none;
+    color: black;
+}
+.container__contato__2via__column__contato:hover{
+    color: var(--cor-3);
+}
+
+
+.wrap {
+    background-color: var(--cor-1);
+}
+.rounded-div-wrap {
+    width: 100%;
+    top: 0;
+    position: relative;
+    height: 10vh;
+    overflow: hidden;
+ }
+ 
+ .rounded-div {
+    width: 150%;
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--cor-2);
+    height: 750%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -86.666%);
+    z-index: 1;
+ }
+
+ .rodape_2via {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor-1);
+    padding: 1em;
+}
+
+.inicio__link__2via{
+    color: var(--cor-2);
+    text-decoration: none;
+    font-family: var(--fonte-1);
+    padding: 0.5em 1em;
+    font-weight: 300;
+    font-size: var(--fonte-size_12);
+}
+
+.inicio__link__2via:hover{
+    color: var(--cor-3);
+}
+
+.rodape__texto__final_2via {
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_12);
+    color: var(--cor-2);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.div_calc{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_calc {
+    margin: 1em 2em;
+}
+.result_calc{
+    margin: 0 1em;
+}
+.result_saldo{
+    font-weight: bold;
+    font-size: var(--fonte-size_18);
+    border: 1px solid #ccc;
+    background-color: var(--cor-2);
+    color: var(--cor-1);
+    padding: 1em;
+    margin-right: 2em;
+    width: 5em;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5em;
+}
+
+.box_menor{
+    background-color: var(--cor-2);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: var(--cor-1);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_14);
+    display: block;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+
+.container__pgto{
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    background-color: var(--cor-2);
+}
+
+.pgto_titulo{
+    color: rgb(87, 86, 86);
+    font-family: var(--fonte-1);
+    font-weight: 400;
+    font-size: var(--fonte-size_18);
+}
+
+.div_pgto{
+    margin: 0 20%;
+    padding: 2em 3em;
+    background-color: rgba(128, 128, 128, 0.13);
+}
+
+.div_pgto_column{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    padding: 1em;
+}
+
+.div_pgto_tipo{
+    margin-bottom: 1em;
+}
+
+.pix_aprova{
+    background-color: green;
+    color: var(--cor-2);
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 0.2em 0.5em;
+}
+
+.pgto_logo{
+    width: 1em;
+}
+
+.pgto_logo2{
+    width: 2em;
+}
+
+.pgto_termos{
+    color: rgb(135, 135, 135);
+    font-size: smaller;
+}
+
+.pgto__botao_link{
+    background-color: green;
+    color: var(--cor-2);
+    font-family: var(--fonte-1);
+    font-size: var(--fonte-size_16);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    padding: 1em 2em;
+    position: relative;
+}
+
+.pgto__botao_link:hover{
+    background-color: rgb(19, 194, 19); 
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.termos{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:1281px){
+    .container__2via {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container__botao_2via {
+        flex-direction: column;
+    }
+    .container__contato__2via {
+        flex-direction: column;
+    }
+    .container__contato__2via__titulo{
+        width: auto;
+        align-items: center;
+        text-align: center;
+    }
+    .container__contato__2via__column{
+        padding-bottom: 2em;
+    }
 }

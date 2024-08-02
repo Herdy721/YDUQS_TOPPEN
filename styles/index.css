@@ -151,7 +151,12 @@
     color: var(--cor-2)
 }
 
-@media screen and (min-width:1281px){
+@media screen and (min-width: 1282px) and (max-width:3000px){
+    .container {
+        height: 60em;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1281px){
     .container {
         height: 40em;
     }
