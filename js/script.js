@@ -58,7 +58,6 @@ function countChecked() {
   document.getElementById('result_saldo').textContent = ` R$ ${result_saldo}`;
 }
 
-// Executar as funções ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
   getValorParcelas();
   updateValue();
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateValue_entrada();
 });
 
-// Executar as funções quando o rádio for alterado
+
 const radioContainer = document.querySelector('.input__check');
 radioContainer.addEventListener('change', () => {
     getValorParcelas();
@@ -78,14 +77,11 @@ radioContainer.addEventListener('change', () => {
 });
 
 function getValorParcelas() {
-  // Obtém todos os elementos radio com o nome "radio__parcelas"
   const radios = document.getElementsByName('radio__parcelas');
   const entrada = getValorentrada();
 
-  // Itera por cada radio button
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
-      // Se o radio estiver selecionado, retorna o valor correspondente
       if (radios[i].value === 'Vencidas') {
         value_par= 3000 - entrada;
         return value_par;
@@ -98,14 +94,11 @@ function getValorParcelas() {
 }
 
 function getValorTotal() {
-  // Obtém todos os elementos radio com o nome "radio__parcelas"
   const radios = document.getElementsByName('radio__parcelas');
   const entrada = getValorentrada();
 
-  // Itera por cada radio button
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
-      // Se o radio estiver selecionado, retorna o valor correspondente
       if (radios[i].value === 'Vencidas') {
         value_par= 3000;
         return value_par;
