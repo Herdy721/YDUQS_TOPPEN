@@ -100,10 +100,10 @@ function getValorTotal() {
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       if (radios[i].value === 'Vencidas') {
-        value_par= 3000;
+        value_par= "3.000,00";
         return value_par;
       } else {
-        value_par= 7200;
+        value_par= "7.200,00";
         return value_par;
       }
     }
