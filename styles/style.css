@@ -122,6 +122,35 @@ body {
 .input_email_text:hover{
     border: 1px solid var(--cor-3);  
 }
+
+.input_email_entrada{
+    width: 5em;
+    background-color: var(--cor-3);
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 4px;  
+}
+.input_email_entrada::placeholder{
+    color: white;
+}
+.input_email_entrada:hover{
+    border: 1px solid var(--cor-2);
+}
+
+.input_email_parcela{
+    width: 5em;
+    background-color: var(--cor-3);
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+.input_email_parcela::placeholder{
+    color: white;
+}
+.input_email_parcela:hover{
+    border: 1px solid var(--cor-3);
+}
+
 .tabela {
     text-align: center;
     background-color: #f4f4f4;
